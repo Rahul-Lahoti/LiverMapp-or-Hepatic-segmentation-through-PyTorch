@@ -1,6 +1,6 @@
 
 
-Pytorch based patient liver screening ML Project : 
+Pytorch based patient liver screening ML Project :
 
 ![Output image](https://github.com/amine0110/Liver-Segmentation-Using-Monai-and-PyTorch/blob/main/images/liver_segmentation.PNG)
 
