@@ -1,21 +1,10 @@
-[![GitHub issues](https://img.shields.io/github/issues/amine0110/Liver-Segmentation-Using-Monai-and-PyTorch)](https://github.com/amine0110/Liver-Segmentation-Using-Monai-and-PyTorch/issues) [![GitHub stars](https://img.shields.io/github/stars/amine0110/Liver-Segmentation-Using-Monai-and-PyTorch)](https://github.com/amine0110/Liver-Segmentation-Using-Monai-and-PyTorch/stargazers) [![GitHub license](https://img.shields.io/github/license/amine0110/Liver-Segmentation-Using-Monai-and-PyTorch)](https://github.com/amine0110/Liver-Segmentation-Using-Monai-and-PyTorch) [![GitHub forks](https://img.shields.io/github/forks/amine0110/Liver-Segmentation-Using-Monai-and-PyTorch)](https://github.com/amine0110/Liver-Segmentation-Using-Monai-and-PyTorch/network) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/torch) [![YouTube Video Views](https://img.shields.io/youtube/views/AU4KlXKKnac?style=social)](https://youtu.be/AU4KlXKKnac) ![GitHub watchers](https://img.shields.io/github/watchers/amine0110/Liver-Segmentation-Using-Monai-and-PyTorch?style=social)
-# Liver Segmentation Using Monai and PyTorch
-You'll find all the Python files you need to accomplish liver segmentation with Monai and PyTorch in this repo, and you can use the same code to segment other organs as well.
 
-Link to the original course [here](https://www.learn.pycad.co/course/liver-segmentation).
+
+Liver segmentation with Monai and PyTorch:
 
 ![Output image](https://github.com/amine0110/Liver-Segmentation-Using-Monai-and-PyTorch/blob/main/images/liver_segmentation.PNG)
 
-So do this project, you will find some scripts that I wrote by myself and others that I took from Monai's tutorials. For this reason you need to take a look to their original repo and [website](https://monai.io/) to get more information.
 
-## Cloning the repo
-You can start by cloning this repo in your wordspace and then start playing with the function to make your project done.
-```
-git clone https://github.com/amine0110/Liver-Segmentation-Using-Monai-and-PyTorch
-```
-```
-cd ./Liver-Segmentation-Using-Monai-and-PyTorch
-```
 ## Packages that need to be installed:
 ```
 pip install monai
@@ -24,12 +13,12 @@ pip install monai
 pip install -r requirements.txt
 ```
 ## Showing a patient from the dataset
-Some of the most common queries I had while utilizing medical imaging were regarding how to present a patient. To address this, I created explicit scripts for how to show a patient from the training and testing datasets, which you can see here.
+How to present a patient: To address this, I created explicit scripts for how to show a patient from the training and testing datasets, which we can see here.
 
 ```Python
 def show_patient(data, SLICE_NUMBER=1, train=True, test=False):
     """
-    This function is to show one patient from your datasets, so that you can si if the it is okay or you need 
+    This function is to show one patient from your datasets, so that we can see if the it is okay or you need 
     to change/delete something.
     `data`: this parameter should take the patients from the data loader, which means you need to can the function
     prepare first and apply the transforms that you want after that pass it to this function so that you visualize 
@@ -69,11 +58,11 @@ def show_patient(data, SLICE_NUMBER=1, train=True, test=False):
 
 ```
 
-But before calling this function, you need to do the preprocess to your data, in fact this function will help you to visualize your patients after applying the different transforms so that you will know if you need to change some parameters or not.
-The function that does the preprocess can be found in the `preprocess.py` file and in that file you will find the function `prepare()` that you can use for the preprocess.
+But before calling this function, we need to do the preprocess to your data, to visualize our patients after applying the different transforms so that we will know if we need to change some parameters or not.
+The function that does the preprocess can be found in the `preprocess.py` file and in that file we will find the function `prepare()` that we can use for the preprocess.
 
 ## Training
-After understanding how to do the preprocess you can start import the `3D Unet` from monai and defining the parameters of the model (dimensions, input channels, output channels...).
+After understanding how to do the preprocess we can start import the `3D Unet` from monai and defining the parameters of the model (dimensions, input channels, output channels...).
 
 ```Python
 model = UNet(
@@ -87,17 +76,15 @@ model = UNet(
 ).to(device)
 ```
 
-And to run the code, you can use the scripts `train.py` that will call the train function that I have created using the same principal used in Monai's tutorials.
+And to run the code, we can use the scripts `train.py`.
 
 ## Testing the model
-To test the model, there is the jupyter notebook `testing.ipynb` file that contains the different codes that you need. You will find the part to plot the training/testing graphs about the loss and the dice coefficient and of course you will find the the part to show the results of one of the test data to see the output of your model.
+To test the model, there is the jupyter notebook `testing.ipynb` file that contains the different codes that we need. We will be training/testing graphs about the loss and the dice coefficient and of course show the results of one of the test data to see the output of our model.
 
 ![Output image](https://github.com/amine0110/Liver-Segmentation-Using-Monai-and-PyTorch/blob/main/images/graphs.PNG)
 
 ----------------------------------------------------------------------------------------------------------------------------------
-Before using the code, I recommend that you watch my course, in which I explain everything in this repo, or at the very least read my blog entries, in which I explain how to use the various scripts so that you don't get confused.
 
-You can read about the tutorial in my blog post series starting by [this one.](https://pycad.co/liver-segmentation-part-1/)
 
 ## Conversion tools
 
@@ -105,14 +92,6 @@ For the different preparations that I talked about in the course/blogs I have cr
 
 ![154864750-c55a3129-67c7-438a-8549-e2c45c433048](https://user-images.githubusercontent.com/37108394/156251291-a0911b63-41b6-4c8a-820b-a9bfec5e452b.png)
 
-## 📩 Newsletter
-Stay up-to-date on the latest in computer vision and medical imaging! Subscribe to my newsletter now for insights and analysis on the cutting-edge developments in this exciting field.
 
-https://pycad.co/join-us/
 
-## 🆕 NEW 
-
-Learn how to effectively manage and process DICOM files in Python with our comprehensive course, designed to equip you with the skills and knowledge you need to succeed.
-
-https://www.learn.pycad.co/course/dicom-simplified
 
