@@ -1,4 +1,16 @@
+Liver Segmentation Project with PyTorch and MONAI
 
+This project aims to develop an efficient and accurate liver segmentation solution using the PyTorch deep learning framework and the MONAI (Medical Open Network for AI) library. The goal is to automatically identify and segment liver regions from medical images, such as CT scans or MRI data. 
+
+Key Features:
+- Utilizes PyTorch for building and training deep neural networks for liver segmentation.
+- Integrates MONAI, a powerful open-source library for medical imaging, to streamline data preprocessing, augmentation, and evaluation.
+- Implements state-of-the-art segmentation models, such as U-Net or DeepLab, tailored specifically for liver segmentation tasks.
+- Provides pre-processing pipelines for handling medical image data, including loading, preprocessing, and data augmentation.
+- Offers comprehensive evaluation metrics to assess the performance of the segmentation models, such as Dice Similarity Coefficient (DSC), Intersection over Union (IoU), and Hausdorff Distance.
+- Supports GPU acceleration for faster training and inference on compatible hardware.
+
+This repository contains the complete source code, pre-trained models, example datasets, and detailed documentation to facilitate liver segmentation research or applications in the medical field. Contributions and collaborations are welcome to further enhance the accuracy and robustness of the liver segmentation models.
 
 Pytorch based patient liver screening ML Project :
 
